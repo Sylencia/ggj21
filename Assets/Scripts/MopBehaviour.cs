@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MopBehaviour : MonoBehaviour
 {
-    public GameObject followLocation;
+    //public GameObject followLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -20,20 +20,20 @@ public class MopBehaviour : MonoBehaviour
 
     void LateUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, followLocation.transform.position, 1.0f);
+        //transform.position = Vector3.MoveTowards(transform.position, followLocation.transform.position, 1.0f);
 
-        Vector3 eulerRotation = new Vector3(transform.eulerAngles.x, followLocation.transform.eulerAngles.y, -transform.eulerAngles.z);
+        //Vector3 eulerRotation = new Vector3(transform.eulerAngles.x, followLocation.transform.eulerAngles.y, -transform.eulerAngles.z);
         //Vector3 eulerRotation = new Vector3(-transform.eulerAngles.x, followLocation.transform.eulerAngles.y, -transform.eulerAngles.z);
-        transform.rotation = Quaternion.Euler(eulerRotation);
+       // transform.rotation = Quaternion.Euler(eulerRotation);
     }
 
-    void OnCollisionEnter(Collision other)   //void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)   //void OnColliderEnter(Collision other)
     {
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Sweep") || GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Slash"))
-        {
+        //if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Sweep") || GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Slash"))
+        //{
             GameObject obj = other.gameObject;
 
-            if (!other.gameObject.CompareTag("Player"))
+            if (!obj.CompareTag("Player") && obj.GetComponent<Rigidbody>() != null)
             {
                 Vector3 dir = (transform.position - obj.transform.position).normalized;
 
@@ -43,6 +43,6 @@ public class MopBehaviour : MonoBehaviour
                 rb.AddForce(-dir * 50, ForceMode.Impulse);
             }
 
-        }
+        //}
     }
 }
