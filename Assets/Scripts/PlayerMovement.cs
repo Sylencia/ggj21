@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private GameObject mop;
 
-    public Camera mainCam;
+    private Camera mainCam;
 
     private bool grounded;
     private float lastJump;
@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
         mop = GameObject.FindGameObjectWithTag("Mop");
+
+        mainCam = Camera.main;
     }
 
 
