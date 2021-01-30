@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
         for(var i = 0; i < objectsToSpawn; ++i)
         {
             var posX = Random.Range(-spawnRadius, spawnRadius);
-            var posY = Random.Range(2f, maxSpawnHeight);
+            var posY = Random.Range(0f, maxSpawnHeight);
             var posZ = Random.Range(-spawnRadius, spawnRadius);
             var spawnIdx = Random.Range(0, spawnList.Length);
             var gm = Instantiate(spawnList[spawnIdx], new Vector3(transform.position.x + posX, transform.position.y + posY, transform.position.z + posZ), Quaternion.identity);
@@ -30,8 +30,7 @@ public class Spawner : MonoBehaviour
     public void SpawnKey()
     {
             var posX = Random.Range(-spawnRadius, spawnRadius);
-            var posY = Random.Range(2f, maxSpawnHeight);
             var posZ = Random.Range(-spawnRadius, spawnRadius);
-            Instantiate(keyObj, new Vector3(transform.position.x + posX, transform.position.y + posY, transform.position.z + posZ), Quaternion.identity);
+            Instantiate(keyObj, new Vector3(transform.position.x + posX, transform.position.y, transform.position.z + posZ), Quaternion.identity);
     }
 }
