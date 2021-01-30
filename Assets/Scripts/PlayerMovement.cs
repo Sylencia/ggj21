@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] //makes private variables show up in Inspector
     private float currentSpeed;
 
+    public float moveSpeed = 12;
     public float maxMoveSpeed = 20;
     public float jumpForce = 5;
 
@@ -49,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         rb.rotation = Quaternion.Euler(eulerRotation);
 
         //THEN MOVE PLAYER RELATIVE TO ROTATION
-        rb.AddRelativeForce(moveInput * maxMoveSpeed);
+        rb.AddRelativeForce(moveInput * moveSpeed);
         
         currentSpeed = rb.velocity.magnitude;      // get the latest speed
 

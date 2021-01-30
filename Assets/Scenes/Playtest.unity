@@ -4710,6 +4710,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.36
       objectReference: {fileID: 0}
+    - target: {fileID: 2290440132766112997, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 57487595}
+    - target: {fileID: 2290440132766112997, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
     - target: {fileID: 2290440132766112998, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4784,7 +4792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2290440132786813767, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
       propertyPath: maxMoveSpeed
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
