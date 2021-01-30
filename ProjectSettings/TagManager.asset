@@ -8,6 +8,8 @@ TagManager:
   - Floor
   - GameManager
   - Mop
+  - Hand
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - UI
   - Player
   - Mop
-  - 
+  - Key
   - 
   - 
   - 

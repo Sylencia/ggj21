@@ -55,6 +55,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CompleteGame()
+    {
+        MoveToNewState(GAME_STATE.FINISHED);
+    }
+
     public bool IsGameRunning()
     {
         return gameState == GAME_STATE.RUNNING;
@@ -76,6 +81,9 @@ public class GameManager : MonoBehaviour
         {
             gameStateOnUnpause = gameState;
             gameState = GAME_STATE.PAUSED;
+        } else if(newState == GAME_STATE.FINISHED)
+        {
+            gameState = GAME_STATE.FINISHED;
         }
     }
 }
