@@ -21,12 +21,15 @@ public class PlayerMovement : MonoBehaviour
     public float maxMoveSpeed = 20;
     public float jumpForce = 5;
 
+    private GameManager gm;
+
 
     // Start is called before the first frame update
     //if necessary use Awake() to execute things (on 'this' script) before the first Start, which is more for linking with other components
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
 
