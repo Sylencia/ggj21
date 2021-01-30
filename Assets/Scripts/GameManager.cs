@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void MoveToNewState(GAME_STATE newState)
-    
+    { 
         if(newState == GAME_STATE.READY)
         {
             timerComponent.SetUIEnabled(false);
