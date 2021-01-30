@@ -1861,7 +1861,7 @@ MonoBehaviour:
   m_VerticalAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 250
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -1885,7 +1885,7 @@ MonoBehaviour:
   m_HorizontalAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 250
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -4702,6 +4702,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: 2290440132766112997, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4709,14 +4710,35 @@ PrefabInstance:
     - target: {fileID: 2290440132766112997, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PauseGame
+=======
+    - target: {fileID: 2290440132574739985, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.445
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290440132574739985, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2290440132766112998, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2290440132766113002, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290440132766113003, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2290440132786813760, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290440132786813760, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2290440132786813760, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4766,6 +4788,14 @@ PrefabInstance:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 498360970}
+    - target: {fileID: 2290440132786813767, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
+      propertyPath: jumpForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290440132786813767, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
+      propertyPath: maxMoveSpeed
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86596ca40b12d45dfb27ffe945d20b17, type: 3}
 --- !u!1001 &7580773265656105574

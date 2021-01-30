@@ -21,11 +21,15 @@ public class MopBehaviour : MonoBehaviour
     void LateUpdate()
     {
         transform.position = Vector3.MoveTowards(transform.position, followLocation.transform.position, 1.0f);
+
+        Vector3 eulerRotation = new Vector3(transform.eulerAngles.x, followLocation.transform.eulerAngles.y, -transform.eulerAngles.z);
+        //Vector3 eulerRotation = new Vector3(-transform.eulerAngles.x, followLocation.transform.eulerAngles.y, -transform.eulerAngles.z);
+        transform.rotation = Quaternion.Euler(eulerRotation);
     }
 
     void OnCollisionEnter(Collision other)   //void OnTriggerEnter(Collider other)
     {
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("RightSwing"))
+        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Sweep") || GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Slash"))
         {
             GameObject obj = other.gameObject;
 
@@ -36,7 +40,7 @@ public class MopBehaviour : MonoBehaviour
                 Rigidbody rb = obj.GetComponent<Rigidbody>();
 
                 //add force pushing object away from player
-                rb.AddForce(-dir * 100, ForceMode.Impulse);
+                rb.AddForce(-dir * 50, ForceMode.Impulse);
             }
 
         }
