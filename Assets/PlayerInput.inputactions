@@ -30,6 +30,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Sweep",
+                    "type": "Button",
+                    "id": "6bf01b32-f90f-472c-8d0a-977ab0fd31f9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Look",
                     "type": "PassThrough",
                     "id": "b93f8fdf-72c5-4a23-b29f-d69143b870fc",
@@ -41,6 +49,14 @@
                     "name": "Pause",
                     "type": "Button",
                     "id": "ee0e9bf4-46f6-4e9c-b275-2c130287d687",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Grab",
+                    "type": "Button",
+                    "id": "11e2deb1-287d-49e0-bedb-5f4da41526c8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -242,6 +258,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "39f881f0-7ce8-4b08-9fa1-1f6caac29ad0",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88daa24a-a3c9-42ae-b492-60b9737208a3",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "256d1819-3ec2-4304-baee-344d5564b72b",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sweep",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c23c4608-b84b-4d2a-b2fc-6f5b9b4b1e0d",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sweep",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

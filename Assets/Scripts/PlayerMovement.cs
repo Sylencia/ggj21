@@ -11,8 +11,9 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 moveInput;
 
+    private GameObject mop;
+
     public Camera mainCam;
-    public GameObject mop;
 
     private bool grounded;
     private float lastJump;
@@ -33,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
+        mop = GameObject.FindGameObjectWithTag("Mop");
     }
 
 
@@ -105,10 +108,28 @@ public class PlayerMovement : MonoBehaviour
         {
             //DoSomething
             Animator anim = mop.GetComponent<Animator>();
-            anim.Play("RightSwing");
+            anim.Play("Swing");
         }
     }
 
+    public void OnSweep(InputAction.CallbackContext ctx)
+    {
+        if (gm.IsGameRunning())
+        {
+            //DoSomething
+            Animator anim = mop.GetComponent<Animator>();
+            anim.Play("Sweep");
+        }
+    }
+
+    public void OnGrab(InputAction.CallbackContext ctx)
+    {
+        if (gm.IsGameRunning())
+        {
+            //DoSomething
+            
+        }
+    }
 
     /* TRIGGERS AND COLLIDERS */
 
