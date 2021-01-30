@@ -61,8 +61,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void MoveToNewState(GAME_STATE newState)
-    {
-        Debug.Log(gameState.ToString() + " " + newState.ToString());
+    
         if(newState == GAME_STATE.READY)
         {
             timerComponent.SetUIEnabled(false);
