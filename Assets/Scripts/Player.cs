@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     private bool hasKey;
     private GameManager gm;
     private GameObject key;
+    public Image keyImage;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         key = GameObject.FindGameObjectWithTag("Key");
+        keyImage.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,6 +39,7 @@ public class Player : MonoBehaviour
         {
             key.SetActive(false);
             hasKey = true;
+            keyImage.gameObject.SetActive(true);
         }
     }
 }

@@ -73,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918210667}
   m_LocalRotation: {x: -0, y: -0, z: -0.08715578, w: 0.9961947}
-  m_LocalPosition: {x: 0.381, y: 0, z: 0.793}
+  m_LocalPosition: {x: 0.381, y: -0.2, z: 0.793}
   m_LocalScale: {x: 0.10000002, y: 2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 2290440132786813760}
@@ -481,13 +481,13 @@ MonoBehaviour:
     m_ActionName: gameplayActions/Sweep[/Mouse/rightButton,/DualShock4GamepadHID/leftTrigger]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2290440132766112998}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 429887193}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: GrabItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
