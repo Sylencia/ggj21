@@ -7,6 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     public void OnPlayGameClick()
     {
-        SceneManager.LoadScene("Playtest");
+        SceneManager.LoadScene("Integration");
     }
 }

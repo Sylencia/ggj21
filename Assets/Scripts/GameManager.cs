@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class GameManager : MonoBehaviour
     private GAME_STATE gameState;
     private float countdownTime = 3f;
     private float gameTime = 0f;
+    public float GameTime
+    {
+        get { return gameTime;  }
+    }
     private Timer timerComponent;
     private Countdown countdownComponent;
     private GAME_STATE gameStateOnUnpause = GAME_STATE.READY;
@@ -55,6 +60,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CompleteGame()
+    {
+        MoveToNewState(GAME_STATE.FINISHED);
+    }
+
     public bool IsGameRunning()
     {
         return gameState == GAME_STATE.RUNNING;
@@ -76,6 +86,17 @@ public class GameManager : MonoBehaviour
         {
             gameStateOnUnpause = gameState;
             gameState = GAME_STATE.PAUSED;
+        } else if(newState == GAME_STATE.FINISHED)
+        {
+            gameState = GAME_STATE.FINISHED;
+            DontDestroyOnLoad(this.gameObject);
+            StartCoroutine("PauseBeforeChangingScene");
         }
+    }
+
+    private IEnumerator PauseBeforeChangingScene()
+    {
+        yield return new WaitForSeconds(0.75f);
+        SceneManager.LoadScene("Finish");
     }
 }

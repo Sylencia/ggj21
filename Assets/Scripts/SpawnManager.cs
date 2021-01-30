@@ -8,10 +8,14 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         var spawners = GameObject.FindGameObjectsWithTag("Spawner");
-        if (spawners.Length > 0)
+        var idx = Random.Range(0, spawners.Length);
+        for (var i = 0; i < spawners.Length; ++i)
         {
-            var idx = Random.Range(0, spawners.Length);
-            spawners[idx].GetComponent<Spawner>().SpawnKey();
+            if (i == idx)
+            {
+                spawners[i].GetComponent<Spawner>().SpawnKey();
+            }
+            spawners[i].GetComponent<Spawner>().SpawnObjects();
         }
     }
 }
