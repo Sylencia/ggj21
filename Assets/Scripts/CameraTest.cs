@@ -15,6 +15,7 @@ public class CameraTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(Input.GetKey(KeyCode.DownArrow))
         {
             var newPos = transform.position;
@@ -42,5 +43,6 @@ public class CameraTest : MonoBehaviour
             newPos.x += speed;
             transform.position = newPos;
         }
+        */
     }
 }
