@@ -60,7 +60,6 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.y < 0)
         {
             rb.velocity += Vector3.up * Physics.gravity.y * 2.5f * Time.deltaTime;
-            Debug.Log("falling");
         }
     }
 
@@ -82,14 +81,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
-        Vector2 rawInput = ctx.ReadValue<Vector2>();
-        moveInput.x = rawInput.x;
-        moveInput.z = rawInput.y;
+        if (gm.IsGameRunning())
+        {
+            Vector2 rawInput = ctx.ReadValue<Vector2>();
+            moveInput.x = rawInput.x;
+            moveInput.z = rawInput.y;
+        }
     }
 
     public void OnJump(InputAction.CallbackContext ctx)
     {
-        if (grounded)
+        if (grounded && gm.IsGameRunning())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             lastJump = 0.0f;    //reset jump timer
@@ -98,9 +100,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMop(InputAction.CallbackContext ctx)
     {
-        //DoSomething
-        Animator anim = mop.GetComponent<Animator>();
-        anim.Play("RightSwing");
+        if (gm.IsGameRunning())
+        {
+            //DoSomething
+            Animator anim = mop.GetComponent<Animator>();
+            anim.Play("RightSwing");
+        }
     }
 
 

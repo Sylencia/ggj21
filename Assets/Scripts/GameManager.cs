@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private float gameTime = 0f;
     private Timer timerComponent;
     private Countdown countdownComponent;
-    private GAME_STATE gameStateOnUnpause;
+    private GAME_STATE gameStateOnUnpause = GAME_STATE.READY;
 
 
     // Start is called before the first frame update
@@ -44,19 +44,25 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-        if (!(gameState == GAME_STATE.PAUSED))
-        {
-            Time.timeScale = 0;
-            MoveToNewState(GAME_STATE.PAUSED);
-        } else
+        if (gameState == GAME_STATE.PAUSED)
         {
             Time.timeScale = 1;
             MoveToNewState(gameStateOnUnpause);
+        } else
+        {
+            Time.timeScale = 0;
+            MoveToNewState(GAME_STATE.PAUSED);
         }
+    }
+
+    public bool IsGameRunning()
+    {
+        return gameState == GAME_STATE.RUNNING;
     }
 
     private void MoveToNewState(GAME_STATE newState)
     {
+        Debug.Log(gameState.ToString() + " " + newState.ToString());
         if(newState == GAME_STATE.READY)
         {
             timerComponent.SetUIEnabled(false);
