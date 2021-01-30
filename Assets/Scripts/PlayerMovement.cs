@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 //using DG.Tweening;        remember to use DOTween
 
 public class PlayerMovement : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveInput;
 
     public Camera mainCam;
+    public GameObject mop;
 
     private bool grounded;
     private float lastJump;
@@ -93,7 +95,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMop(InputAction.CallbackContext ctx)
     {
-       //DoSomething
+        //DoSomething
+        Animator anim = mop.GetComponent<Animator>();
+        anim.Play("RightSwing");
     }
 
 
