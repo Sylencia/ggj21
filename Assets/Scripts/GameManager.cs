@@ -74,20 +74,24 @@ public class GameManager : MonoBehaviour
     { 
         if(newState == GAME_STATE.READY)
         {
+            Cursor.visible = false;
             timerComponent.SetUIEnabled(false);
             countdownComponent.SetUIEnabled(true);
             gameState = GAME_STATE.READY;
         } else if(newState == GAME_STATE.RUNNING)
         {
+            Cursor.visible = false;
             timerComponent.SetUIEnabled(true);
             countdownComponent.SetUIEnabled(false);
             gameState = GAME_STATE.RUNNING;
         } else if(newState == GAME_STATE.PAUSED)
         {
+            Cursor.visible = true;
             gameStateOnUnpause = gameState;
             gameState = GAME_STATE.PAUSED;
         } else if(newState == GAME_STATE.FINISHED)
         {
+            Cursor.visible = true;
             gameState = GAME_STATE.FINISHED;
             DontDestroyOnLoad(this.gameObject);
             StartCoroutine("PauseBeforeChangingScene");
