@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timerText;
+    public Image timerBg;
     
     void Start()
     {
@@ -15,6 +16,7 @@ public class Timer : MonoBehaviour
     public void SetUIEnabled(bool show)
     {
         timerText.enabled = show;
+        timerBg.enabled = show;
     }
 
     public void UpdateTimerUI(float time)
