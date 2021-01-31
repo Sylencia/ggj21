@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7580773265030444107}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -44,11 +44,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList:
-  - {fileID: 2274855225420103540, guid: 2e74c772a550917469a8c9e2d729a7b1, type: 3}
-  - {fileID: 2331757698441744349, guid: 02ba5275df64f774ba7f30e94208e97b, type: 3}
-  - {fileID: 8330737674680910166, guid: 3419099bdd20d024ba4ee9dbf9096e59, type: 3}
-  keyObj: {fileID: 112990726250369648, guid: 38d93fbde83139244a7f9db9ef4b52b7, type: 3}
-  spawnKey: 0
-  objectsToSpawn: 150
-  spawnRadius: 12.5
-  maxSpawnHeight: 10
+  - {fileID: 3236678430604424072, guid: bb2424ad818fc3946aa70dd2e1ed8195, type: 3}
+  - {fileID: 240811709492182387, guid: ee515f8001281b64ea67c3fe1d0429b9, type: 3}
+  - {fileID: 1054610515678239085, guid: ca361999723061846bf6ac99c3f37ad0, type: 3}
+  - {fileID: 2157450811272679952, guid: 3226a76870020224bb24bddd9a4327bb, type: 3}
+  - {fileID: 1471362878170043067, guid: 91051917553592d4fa50143140dd06be, type: 3}
+  - {fileID: 1620750011189734891, guid: 5143a4b0235d5c947b1235d0d34cb1a8, type: 3}
+  - {fileID: 7040301781342507336, guid: 60efe5f254d89bd4cb5e7480e3ff2984, type: 3}
+  - {fileID: 6215514497545000754, guid: 2f1a2528de48d64469d079c49ac4a2ba, type: 3}
+  - {fileID: 6537385545005114630, guid: f99c0bdb48d6f4543b912c3ba284f735, type: 3}
+  - {fileID: 8443251571655615654, guid: ebc3741d1d719484db1772400b3bbc22, type: 3}
+  - {fileID: 5329535329614781828, guid: 7e172dba420380245859a2b89b51829e, type: 3}
+  - {fileID: 6537385545005114630, guid: f99c0bdb48d6f4543b912c3ba284f735, type: 3}
+  - {fileID: 2816600190909518242, guid: a7a6944c521200c46acc351d7f89e589, type: 3}
+  - {fileID: 6000963448874616016, guid: 4aab3fec9153db44f8af02d1ae28dc9b, type: 3}
+  - {fileID: 5107715451324760649, guid: 0aedc5f3a48f24f4baf4941175ee6875, type: 3}
+  - {fileID: 5174280163854599279, guid: f89bfccc0a185d24cabb7c635cec0a25, type: 3}
+  - {fileID: 2132025332932469445, guid: 9dcc49f78c5259e429dfeb1479cf9279, type: 3}
+  - {fileID: 6036707512362535316, guid: c8cc28e0e33c07546aed040a4b46c9a0, type: 3}
+  - {fileID: 3914132392296454099, guid: 22fd63f1333f1a04b89cee6b63981195, type: 3}
+  - {fileID: 8717518926116942788, guid: 9200a98bdcd85bc47857e91602ca87d1, type: 3}
+  - {fileID: 106109231754847270, guid: 62bd9a7988c41d244a352ddc10ec4127, type: 3}
+  - {fileID: 4369906366736268901, guid: d40346735c645a146958ac3490802268, type: 3}
+  keyObj: {fileID: 1129411249539913066, guid: d80d16c3dc4ac8a4cb4bf37c85c95834, type: 3}
+  objectsToSpawn: 250
+  spawnRadius: 1
+  maxSpawnHeight: 2
