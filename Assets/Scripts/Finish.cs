@@ -27,11 +27,11 @@ public class Finish : MonoBehaviour
 
     public void OnPlayGameClick()
     {
-        SceneManager.LoadScene("Integration");
+        SceneManager.LoadScene(1);
     }
 
     public void OnMainMenuClick()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(0);
     }
 }

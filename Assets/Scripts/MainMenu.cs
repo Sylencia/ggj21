@@ -7,6 +7,11 @@ public class MainMenu : MonoBehaviour
 {
     public void OnPlayGameClick()
     {
-        SceneManager.LoadScene("Integration");
+        SceneManager.LoadScene(1);
+    }
+
+    public void OnExitClick()
+    {
+        Application.Quit();
     }
 }
