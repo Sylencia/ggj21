@@ -1,28 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public enum GAME_STATE { READY, RUNNING, PAUSED, FINISHED };
+    public Image blackoutPanel;
+    public Text storyText1;
+    public Text storyText2;
+    public Text storyText3;
+    public Text storyText4;
+    public enum GAME_STATE { READY, RUNNING, FINISHED };
     private GAME_STATE gameState;
-    private float countdownTime = 3f;
+    private float countdownTime = 0f;
     private float gameTime = 0f;
     public float GameTime
     {
         get { return gameTime;  }
     }
     private Timer timerComponent;
-    private Countdown countdownComponent;
-    private GAME_STATE gameStateOnUnpause = GAME_STATE.READY;
 
 
     // Start is called before the first frame update
     void Start()
     {
         timerComponent = GetComponent<Timer>();
-        countdownComponent = GetComponent<Countdown>();
         MoveToNewState(GAME_STATE.READY);
     }
 
@@ -31,12 +34,26 @@ public class GameManager : MonoBehaviour
     {
         if(gameState == GAME_STATE.READY)
         {
-            countdownTime -= Time.deltaTime;
-            countdownComponent.UpdateCountdownUI(countdownTime);
-
-            if(countdownTime <= 0)
+            countdownTime += Time.deltaTime;
+            if (countdownTime < 3.5f)
             {
-                countdownTime = 0;
+                storyText1.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, countdownTime) * 2f);
+                storyText2.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, (countdownTime - 0.75f) * 2f));
+                storyText3.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, (countdownTime - 1.5f) * 1.5f));
+                storyText4.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, (countdownTime - 2.5f) * 1.5f));
+            }
+            else
+            {
+                blackoutPanel.color = new Color(0f, 0f, 0f, Mathf.Lerp(1f, 0f, countdownTime - 3.5f));
+                storyText1.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 3.5f));
+                storyText2.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 3.5f));
+                storyText3.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 3.5f));
+                storyText4.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 3.5f));
+            }
+
+            if (countdownTime >= 4.5f)
+            {
+                countdownTime = 4.5f;
                 MoveToNewState(GAME_STATE.RUNNING);
             }
         }
@@ -47,17 +64,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PauseGame()
+    public void QuitLevel()
     {
-        if (gameState == GAME_STATE.PAUSED)
-        {
-            Time.timeScale = 1;
-            MoveToNewState(gameStateOnUnpause);
-        } else
-        {
-            Time.timeScale = 0;
-            MoveToNewState(GAME_STATE.PAUSED);
-        }
+        SceneManager.LoadScene(0);
     }
 
     public void CompleteGame()
@@ -76,19 +85,17 @@ public class GameManager : MonoBehaviour
         {
             Cursor.visible = false;
             timerComponent.SetUIEnabled(false);
-            countdownComponent.SetUIEnabled(true);
+            blackoutPanel.enabled = true;
             gameState = GAME_STATE.READY;
         } else if(newState == GAME_STATE.RUNNING)
         {
             Cursor.visible = false;
             timerComponent.SetUIEnabled(true);
-            countdownComponent.SetUIEnabled(false);
+            blackoutPanel.enabled = false;
+            storyText1.enabled = false;
+            storyText2.enabled = false;
+            storyText3.enabled = false;
             gameState = GAME_STATE.RUNNING;
-        } else if(newState == GAME_STATE.PAUSED)
-        {
-            Cursor.visible = true;
-            gameStateOnUnpause = gameState;
-            gameState = GAME_STATE.PAUSED;
         } else if(newState == GAME_STATE.FINISHED)
         {
             Cursor.visible = true;
@@ -101,6 +108,6 @@ public class GameManager : MonoBehaviour
     private IEnumerator PauseBeforeChangingScene()
     {
         yield return new WaitForSeconds(0.75f);
-        SceneManager.LoadScene("Finish");
+        SceneManager.LoadScene(2);
     }
 }
