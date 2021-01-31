@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2536884018274333556}
   - component: {fileID: 8656850506183944667}
   - component: {fileID: 8236458114767865092}
-  - component: {fileID: 3451538620290443463}
-  m_Layer: 10
+  - component: {fileID: 813398273369782907}
+  m_Layer: 0
   m_Name: Clipboard 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!65 &3451538620290443463
+--- !u!65 &813398273369782907
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +125,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.44022685, y: 0.68004507, z: 0.024057837}
+  m_Size: {x: 0.44022685, y: 0.68004507, z: 0.08}
   m_Center: {x: 0.000000062355426, y: 0.34002247, z: 0.005130062}
 --- !u!1 &6215514497545000754
 GameObject:
