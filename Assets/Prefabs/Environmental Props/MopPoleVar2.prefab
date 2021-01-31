@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 7407216746631766999}
   - component: {fileID: 7786050400596727682}
   - component: {fileID: 4400019444273181086}
+  - component: {fileID: 6590107184836420811}
+  - component: {fileID: 7750203205820154587}
   m_Layer: 0
   m_Name: Mop_Pole 1
   m_TagString: Untagged
@@ -129,3 +131,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6590107184836420811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157353244799228846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8599525, y: 0.22, z: 0.12909174}
+  m_Center: {x: 0.00000017087693, y: 0.09, z: -0.00000022071603}
+--- !u!136 &7750203205820154587
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157353244799228846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 2.5483015
+  m_Direction: 1
+  m_Center: {x: -0.000000056958974, y: 1.2741507, z: 0}

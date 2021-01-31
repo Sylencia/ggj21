@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4407673465210683068}
   m_Layer: 0
   m_Name: Single_Key
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,9 +44,10 @@ GameObject:
   - component: {fileID: 7000927996832489909}
   - component: {fileID: 6760949866638463654}
   - component: {fileID: 7921996503869584891}
+  - component: {fileID: 9091676297786360636}
   m_Layer: 0
   m_Name: Single_Key 1
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,3 +145,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &9091676297786360636
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5752586866209243143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.17403471, y: 0.008600789, z: 0.43024635}
+  m_Center: {x: -0.002611585, y: 0.0043003685, z: 0.016766243}

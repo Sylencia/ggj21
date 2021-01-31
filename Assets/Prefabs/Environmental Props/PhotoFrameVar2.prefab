@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5257740235323762235}
   - component: {fileID: 34322052686478707}
   - component: {fileID: 3019865246930348898}
+  - component: {fileID: 773919951947856704}
   m_Layer: 0
   m_Name: Photo_Frame 1
   m_TagString: Untagged
@@ -144,3 +145,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &773919951947856704
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5287942301441088441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4616432, y: 0.6884805, z: 0.20394014}
+  m_Center: {x: -0.0000000372529, y: 0.34424025, z: -0.085866965}

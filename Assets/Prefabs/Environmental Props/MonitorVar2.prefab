@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4292550973533099586}
   - component: {fileID: 4149032717542954719}
   - component: {fileID: 4232785895242013864}
+  - component: {fileID: 2817809217749094910}
   m_Layer: 0
   m_Name: Monitor 1
   m_TagString: Untagged
@@ -113,6 +114,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2817809217749094910
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318283019918829264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2700002, y: 1.0319805, z: 0.5665717}
+  m_Center: {x: 0.00000011920929, y: 0.51599026, z: 0.00000008940697}
 --- !u!1 &7386785097887624772
 GameObject:
   m_ObjectHideFlags: 0
