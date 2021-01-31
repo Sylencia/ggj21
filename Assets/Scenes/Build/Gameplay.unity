@@ -26328,7 +26328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3317472132031945384, guid: 19551840880df4c8f8d6c3ad99ba484c, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseGame
+      value: QuitLevel
       objectReference: {fileID: 0}
     - target: {fileID: 3317472132031945384, guid: 19551840880df4c8f8d6c3ad99ba484c, type: 3}
       propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
