@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 moveInput;
 
-    private GameObject mop;
+    public GameObject mop;
 
     private Camera mainCam;
 
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
-        mop = GameObject.FindGameObjectWithTag("Mop");
+        //mop = GameObject.FindGameObjectWithTag("Mop");
 
         mainCam = Camera.main;
     }
