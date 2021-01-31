@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     public void SetUIEnabled(bool show)
     {
         timerText.enabled = show;
-        timerBg.enabled = show;
+//        timerBg.enabled = show;
     }
 
     public void UpdateTimerUI(float time)
