@@ -198,7 +198,7 @@
                 {
                     "name": "",
                     "id": "3d068cea-709c-44cc-8b80-b53a251f6d1e",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -275,7 +275,7 @@
                 {
                     "name": "",
                     "id": "88daa24a-a3c9-42ae-b492-60b9737208a3",
-                    "path": "<Mouse>/middleButton",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -286,7 +286,7 @@
                 {
                     "name": "",
                     "id": "256d1819-3ec2-4304-baee-344d5564b72b",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

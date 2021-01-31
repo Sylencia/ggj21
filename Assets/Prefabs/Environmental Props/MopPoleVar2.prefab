@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 4400019444273181086}
   - component: {fileID: 6590107184836420811}
   - component: {fileID: 7750203205820154587}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mop_Pole 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

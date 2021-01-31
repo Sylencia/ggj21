@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 161900481919306688}
   - component: {fileID: 9021470634339745533}
   - component: {fileID: 1972172107694079447}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MugHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 8599291809427790601}
   - component: {fileID: 9050181261196760342}
   - component: {fileID: 32843162461520132}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MugCup
   m_TagString: Untagged
   m_Icon: {fileID: 0}

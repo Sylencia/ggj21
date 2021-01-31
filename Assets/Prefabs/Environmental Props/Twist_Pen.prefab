@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4535073783389998949}
   - component: {fileID: 7325724315178096122}
   - component: {fileID: 5458899109069788842}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PenHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 9122922456087557012}
   - component: {fileID: 7473843543665494617}
   - component: {fileID: 689707642596409019}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TwistPen 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
