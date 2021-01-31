@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3023640418421054758}
   - component: {fileID: 1124030862111669754}
   - component: {fileID: 2275368688981006708}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Crumpled_Paper 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
