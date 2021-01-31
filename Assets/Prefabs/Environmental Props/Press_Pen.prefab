@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8782175655546917844}
   - component: {fileID: 1387492193814822517}
   - component: {fileID: 3013012210283322285}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PressingPen 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 5270886339476272070}
   - component: {fileID: 1324077894866381145}
   - component: {fileID: 4326768978658191881}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PenHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

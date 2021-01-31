@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
 
             var spawnIdx = Random.Range(0, 11) + Random.Range(0, 11);
             var gm = Instantiate(spawnList[spawnIdx], new Vector3(transform.position.x + posX, transform.position.y + posY, transform.position.z + posZ), Random.rotation);
-            var randomScale = Random.Range(0.5f, 1f);
+            var randomScale = Random.Range(0.75f, 1f);
             var ls = gm.transform.localScale;
             gm.transform.localScale = new Vector3(ls.x * randomScale, ls.y * randomScale, ls.z * randomScale);
         }
