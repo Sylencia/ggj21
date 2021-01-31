@@ -25,8 +25,8 @@ public class Spawner : MonoBehaviour
             var posY = Random.Range(0f, maxSpawnHeight);
             var posZ = Random.Range(-spawnRadius, spawnRadius);
             var spawnIdx = Random.Range(0, spawnList.Length);
-            var gm = Instantiate(spawnList[spawnIdx], new Vector3(transform.position.x + posX, transform.position.y + posY, transform.position.z + posZ), Quaternion.identity);
-            var randomScale = Random.Range(0.5f, 2f);
+            var gm = Instantiate(spawnList[spawnIdx], new Vector3(transform.position.x + posX, transform.position.y + posY, transform.position.z + posZ), Random.rotation);
+            var randomScale = Random.Range(0.5f, 1f);
             var ls = gm.transform.localScale;
             gm.transform.localScale = new Vector3(ls.x * randomScale, ls.y * randomScale, ls.z * randomScale);
             gm.GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
