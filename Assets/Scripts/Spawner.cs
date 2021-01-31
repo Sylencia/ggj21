@@ -23,11 +23,11 @@ public class Spawner : MonoBehaviour
     {
         for (var i = 0; i < objectsToSpawn; ++i)
         {
-            Debug.Log(i.ToString());
             var posX = Random.Range(-spawnRadius, spawnRadius);
             var posY = Random.Range(0f, maxSpawnHeight);
             var posZ = Random.Range(-spawnRadius, spawnRadius);
-            var spawnIdx = Random.Range(0, spawnList.Length);
+
+            var spawnIdx = Random.Range(0, 11) + Random.Range(0, 11);
             var gm = Instantiate(spawnList[spawnIdx], new Vector3(transform.position.x + posX, transform.position.y + posY, transform.position.z + posZ), Random.rotation);
             var randomScale = Random.Range(0.5f, 1f);
             var ls = gm.transform.localScale;
