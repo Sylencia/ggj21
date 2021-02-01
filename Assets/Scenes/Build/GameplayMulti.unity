@@ -43984,7 +43984,7 @@ PrefabInstance:
       objectReference: {fileID: 7174380108379970996, guid: bf6859cbe666745eba4910523fab3d8e, type: 3}
     - target: {fileID: 4141328620336281008, guid: 19551840880df4c8f8d6c3ad99ba484c, type: 3}
       propertyPath: PlayerIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4362336760578163909, guid: 19551840880df4c8f8d6c3ad99ba484c, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -46956,7 +46956,7 @@ PrefabInstance:
       objectReference: {fileID: 7174380108379970996, guid: 8bdacd67d594b4fe3a64228c668d0bca, type: 3}
     - target: {fileID: 4141328620336281008, guid: 19551840880df4c8f8d6c3ad99ba484c, type: 3}
       propertyPath: PlayerIndex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4362336760578163909, guid: 19551840880df4c8f8d6c3ad99ba484c, type: 3}
       propertyPath: m_ConnectedAnchor.x
