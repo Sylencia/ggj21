@@ -35,25 +35,25 @@ public class GameManager : MonoBehaviour
         if(gameState == GAME_STATE.READY)
         {
             countdownTime += Time.deltaTime;
-            if (countdownTime < 3.5f)
+            if (countdownTime < 4f)
             {
-                storyText1.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, countdownTime) * 2f);
-                storyText2.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, (countdownTime - 0.75f) * 2f));
-                storyText3.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, (countdownTime - 1.5f) * 1.5f));
-                storyText4.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, (countdownTime - 2.5f) * 1.5f));
+                storyText1.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, countdownTime * 1.2f));
+                storyText2.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, (countdownTime - 1f) * 1.2f));
+                storyText3.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, (countdownTime - 2f) * 1.2f));
+                storyText4.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, (countdownTime - 3f) * 1.2f));
             }
             else
             {
-                blackoutPanel.color = new Color(0f, 0f, 0f, Mathf.Lerp(1f, 0f, countdownTime - 3.5f));
-                storyText1.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 3.5f));
-                storyText2.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 3.5f));
-                storyText3.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 3.5f));
-                storyText4.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 3.5f));
+                blackoutPanel.color = new Color(0f, 0f, 0f, Mathf.Lerp(1f, 0f, countdownTime - 4f));
+                storyText1.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 4f));
+                storyText2.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 4f));
+                storyText3.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 4f));
+                storyText4.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, countdownTime - 4f));
             }
 
-            if (countdownTime >= 4.5f)
+            if (countdownTime >= 5f)
             {
-                countdownTime = 4.5f;
+                countdownTime = 5f;
                 MoveToNewState(GAME_STATE.RUNNING);
             }
         }
@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
 
     public void QuitLevel()
     {
+        Cursor.visible = true;
         SceneManager.LoadScene(0);
     }
 

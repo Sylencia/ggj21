@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8687549362248945705}
   - component: {fileID: 7611188172993391075}
   - component: {fileID: 3773207662872741642}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Monitor 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

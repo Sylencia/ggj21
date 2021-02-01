@@ -40,6 +40,9 @@ public class Player : MonoBehaviour
             key.SetActive(false);
             hasKey = true;
             keyImage.gameObject.SetActive(true);
+            var audio = GetComponent<AudioSource>();
+            audio.time = 0.5f;
+            audio.Play();
         }
     }
 }
